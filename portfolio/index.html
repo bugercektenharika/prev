@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://berlinrx.cfd/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body>
+    <div class="nvb">
+    <nav class="navbar">
+        <div class="logo"><a href="#anasayfa"><img src="https://berlinxr.cfd/logox.png" alt="logo" style="width:48px;height:48px; border-radius: 50%;"></a></div>
+        <ul class="nav-links">
+            <li><a href="#hakkimda">About Me</a></li>
+            <li><a href="#projeler">My Projects</a></li>
+            <li><a href="#iletisim">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+    <div class="content" id="anasayfa">
+        <h1>Hello, my name is</h1>
+        <h1 class="nick">Berlin.</h1>
+        <p>
+          I'm interested in <span id="contentp" class="contentp"></span></p>
+        <button><a href="#projeler">Check Out My Projects</a></button> 
+    </div>
+
+    <div class="about" id="hakkimda">
+        <h2>About Me</h2>
+        <p>Hello! I'm Berlin, passionate about web development and Python programming. I enjoy creating creative solutions using technology and always try to learn new things. If you want to know more about my projects, feel free to reach out!</p>
+    </div>
+
+    <div class="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>
+            HTML & CSS
+    <div style="width: 25%; background: #eee; border-radius: 35px;">
+    <div style="width: 87%; background: mediumslateblue; height: 20px; border-radius: 35px;"></div>
+            </li>
+            <li>
+            JavaScript & Node.js
+    <div style="width: 25%; background: #eee; border-radius: 35px;">
+    <div style="width: 22%; background: mediumslateblue; height: 20px; border-radius: 35px;"></div>
+            </li>
+            <li>
+            Python
+    <div style="width: 25%; background: #eee; border-radius: 35px;">
+    <div style="width: 40%; background: mediumslateblue; height: 20px; border-radius: 35px;"></div>
+            </li>
+            <li>
+            React
+    <div style="width: 25%; background: #eee; border-radius: 35px;">
+    <div style="width: 10%; background: mediumslateblue; height: 20px; border-radius: 35px;"></div>
+            </li>
+            <li>
+            Data Analysis
+    <div style="width: 25%; background: #eee; border-radius: 35px;">
+    <div style="width: 55%; background: mediumslateblue; height: 20px; border-radius: 35px;"></div>
+        </li>
+        </ul>
+    </div>
+
+    <div class="projects" id="projeler">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Project 1</h3>
+                <p>This is the first project I worked on. It's a website I created using my web development skills.</p>
+                <button><a href=""><i class="fab fa-github"></i>Github Link</a></button>
+            </div>
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>This project is an application I developed using Python. It stands out with its user-friendly interface and functionality.</p>
+                <button><a href=""><i class="fab fa-discord"></i>Discord Server</a></button>
+            </div>
+            <div class="project-item">
+                <h3>Project 3</h3>
+                <p>This project focuses on data analysis and visualization. I make data meaningful using Python libraries.</p>
+                <button><a href=""><i class="fab fa-discord"></i>Discord Server</a></button>
+            </div>
+        </div>
+<!--        <button class="more">More <i class="fas fa-arrow-right"></i></button>     -->
+    </div>
+    
+<div class="contact" id="iletisim">
+        <h2>Contact</h2>
+<div class="contacdiv">
+    <img src="https://berlinxr.cfd/favicon.png" alt="">
+    <h1>Berlin</h1>
+    <div class="buttonss">
+    <button><a href="https://discord.com/users/1055126326032036860"><i class="fab fa-discord"></i></a></button>
+    <button><a href="mailto:onur@notreally.xyz"><i class="fas fa-envelope"></i></a></button>
+    <button><a href="https://github.com/Berlinxr"><i class="fab fa-github"></i></a></button>
+    </div>
+</div>
+
+    </div>
+
+<footer>
+    <p>&copy; 2024 Berlin. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://berlinxr.cfd/privacy.html">Privacy Policy</a> 
+        </div>
+</footer>
+
+<script>
+const textEl = document.getElementById('contentp');
+const texts = ["Web Development.", "Node.js.", "Python.", "React.", "Data Analysis."];  
+let textIndex = 0;
+let charIndex = 0;
+
+function typeWriter() {
+  if (charIndex < texts[textIndex].length) {
+    textEl.innerHTML += texts[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWriter, 100);
+  } else {
+    setTimeout(eraseText, 1000);
+  }
+}
+
+function eraseText() {
+  if (charIndex > 0) {
+    textEl.innerHTML = texts[textIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(eraseText, 50);
+  } else {
+    textIndex = (textIndex + 1) % texts.length;
+    setTimeout(typeWriter, 500);
+  }
+}
+
+typeWriter();
+</script>
+
+</body>
+</html>

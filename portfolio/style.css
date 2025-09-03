@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.nvb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: sticky;
+    z-index: 999;
+    top: 3px;
+
+}
+
+.navbar {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: sticky;
+    top: 20px;
+    width: 34%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #EDEDED;
+    border-radius: 100px;
+    border: 3px solid mediumslateblue;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    margin-right: 20px;
+    font-size: large;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; 
+  width: 0%;
+  height: 3px;
+  background: mediumslateblue;
+  transition: width 0.4s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.content {
+    font-size: x-large;
+    overflow: auto;
+    text-align: left;
+    color: #000000;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10% 50px;
+    background-color: #ffffff;  
+}
+
+.content h1 {
+    position: relative;
+    top: -110px;
+}
+
+.content p {
+    display: block;
+    position: relative;
+    top: -110px;
+}
+
+span {
+    display: inline;
+}
+
+
+.content button {
+    border: 3px solid mediumslateblue;
+    font-family: "Roboto", sans-serif;
+    border-style: 10px solid mediumslateblue;
+    position: relative;
+    top: -110px;
+    padding: 10px 20px;
+    font-size: large;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content button:hover {
+    color: #fff;
+    background-color: mediumslateblue;
+}
+
+.nick { 
+    color: mediumslateblue;
+}
+
+.about {
+    background-color: hsl(0, 0%, 100%);
+    padding: 50px;
+    margin: 50px;
+    border-radius: 30px;
+}
+
+.about p{
+    font-size: large;
+    text-align: left;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.about h2 {
+    margin-top: 10px;
+    text-decoration: underline mediumslateblue;
+    text-underline-offset: 5px;
+    font-size: xx-large;
+    text-align: left;
+    margin-top: 50px;
+    color: #000000;
+}
+
+.projects h2 {
+    margin-top: 10px;
+    text-decoration: underline mediumslateblue;
+    text-underline-offset: 5px;
+    font-size: xx-large;
+    text-align: left;
+    margin-top: 50px;
+    color: #000000;
+}
+
+.projects {
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 30px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.project-item {
+    background-color: #EDEDED;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 20%;
+    height: auto;
+}
+
+.project-item button {
+    border: 3px solid mediumslateblue;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 20px;
+    border-style: 10px solid mediumslateblue;
+    position: relative;
+    font-size: large;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.projects button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-item button:hover {
+    color: #fff;
+    background-color: mediumslateblue;
+}
+
+.project-item i {
+    margin-right: 5px;
+}
+
+.more {
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 3px solid mediumslateblue;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 20px;
+    border-style: 10px solid mediumslateblue;
+    position: relative;
+    font-size: large;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.more:hover {
+    color: #fff;
+    background-color: mediumslateblue;
+}
+
+.project-image {
+    display: flex;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.skills {
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 30px;
+}
+
+.skills h2 {
+    margin-top: 10px;
+    text-decoration: underline mediumslateblue;
+    text-underline-offset: 5px;
+    font-size: xx-large;
+    text-align: left;
+    margin-top: 50px;
+    color: #000000;
+}
+
+.skills li {
+    font-size: large;
+    margin-top: 13px;
+    color: #000000;
+}
+
+.skills div {
+    margin-top: 5px;
+}
+
+.contact {
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 30px;
+}
+
+.contact h2 {
+    margin-top: 10px;
+    text-decoration: underline mediumslateblue;
+    text-underline-offset: 5px;
+    font-size: xx-large;
+    text-align: left;
+    margin-top: 50px;
+    color: #000000;
+}
+
+.contact p {
+    font-size: large;
+    text-align: left;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.contacdiv {
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 50px;
+    border-radius: 30px;
+}
+
+.contacdiv img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 5px solid mediumslateblue;
+}
+
+.contacdiv h1 {
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
+}
+
+.contacdiv button {
+    border: 3px solid mediumslateblue;
+    border-style: 10px solid mediumslateblue;
+    width: 60px;
+    height: 60px;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    position: relative;
+    font-size: large;
+    background-color: #ffffff;
+    color: #000;
+    cursor: pointer;
+    transition: 0.7s;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contacdiv button:hover {
+    color: #ffffff;
+    background-color: mediumslateblue;
+}
+
+.contacdiv button a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: inherit;
+}
+
+.buttonss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #EDEDED;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 3px solid mediumslateblue;
+    border-radius: 0 0 30px 30px;
+}

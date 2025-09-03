@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://berlinrx.cfd/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body>
+    <div class="nvb">
+    <nav class="navbar">
+        <div class="logo"><a href="index.html"><img src="https://berlinxr.cfd/logox.png" alt="logo" style="width:48px;height:48px; border-radius: 50%;"></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#hakkimda">Hakkımda</a></li>
+            <li><a href="index.html#projeler">Projelerim</a></li>
+            <li><a href="index.html#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="about" id="hakkimda">
+        <h2>Title</h2>
+        <p>main Text here</p>
+    </div>
+
+<footer>
+    <p>&copy; 2024 Berlin. Tüm hakları saklıdır.</p>
+    <div class="social-icons">
+        <a href="https://berlinxr.cfd/privacy.html">Gizlilik Politikası</a> 
+        </div>
+</footer>
+
+<script>
+const textEl = document.getElementById('contentp');
+const texts = ["Web geliştirme", "Node.js", "Python"];  
+let textIndex = 0;
+let charIndex = 0;
+
+function typeWriter() {
+  if (charIndex < texts[textIndex].length) {
+    textEl.innerHTML += texts[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWriter, 100);
+  } else {
+    setTimeout(eraseText, 1000);
+  }
+}
+
+function eraseText() {
+  if (charIndex > 0) {
+    textEl.innerHTML = texts[textIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(eraseText, 50);
+  } else {
+    textIndex = (textIndex + 1) % texts.length;
+    setTimeout(typeWriter, 500);
+  }
+}
+
+typeWriter();
+</script>
+
+</body>
+</html>
